@@ -1,0 +1,59 @@
+doctype html
+html
+  head
+    title
+      | CarryMe
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  body
+    header
+      nav.navbar.navbar-default.navbar-fixed-top
+        .container
+          .navbar-header
+            a.navbar-brand[href="#"]
+              | CarryMe
+          .collapse.navbar-collapse
+            ul.nav.navbar-nav
+              li
+                a[href="#"]
+                  | About
+            ul.nav.navbar-nav.navbar-right
+              - if user_signed_in?
+                |  <strong
+                = link_to current_user.name, pages_show_path
+                li
+                  = link_to 'プロフィール変更', edit_user_registration_path
+                li
+                  = link_to 'ログアウト', destroy_user_session_path, method: :delete
+              - else
+                li
+                  = link_to 'サインアップ', new_user_registration_path
+                li
+                  = link_to 'ログイン', new_user_session_path
+              li.dropdown
+                a.dropdown-toggle[href="#" data-toggle="dropdown" role="button" aria-expanded="false"]
+                  | Dropdown 
+                  span.caret
+                ul.dropdown-menu[role="menu"]
+                  li
+                    a[href="#"]
+                      | 星空 凛
+                  li
+                    a[href="#"]
+                      | 西木野 真姫
+                  li.divider
+                  li
+                    a[href="#"]
+                      | 矢澤 にこ
+                  li
+                    a[href="#"]
+                      | 絢瀬 絵里
+                  li
+                    a[href="#"]
+                      | 東條 希
+    p.notice
+      = notice
+    p.alert
+      = alert
+    = yield
