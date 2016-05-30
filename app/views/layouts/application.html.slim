@@ -8,7 +8,7 @@ html
     = csrf_meta_tags
   body
     header
-      nav.navbar.navbar-default.navbar-fixed-top
+      nav.navbar.navbar-default
         .container
           .navbar-header
             a.navbar-brand[href="#"]
@@ -18,6 +18,8 @@ html
               li
                 a[href="#"]
                   | About
+              li
+                = link_to 'new article', new_article_path
             ul.nav.navbar-nav.navbar-right
               - if user_signed_in?
                 |  <strong
