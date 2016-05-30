@@ -35,6 +35,8 @@ group :development, :test do
   gem 'guard-rspec'
   gem "better_errors"
   gem "binding_of_caller"
+  gem 'seed-fu'
+  gem 'faker'
 end
 
 group :development do
