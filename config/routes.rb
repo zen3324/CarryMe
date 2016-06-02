@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root 'pages#index'
+  root 'articles#index'
   get 'pages/show'
 
   resources :articles do
