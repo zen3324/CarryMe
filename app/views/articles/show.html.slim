@@ -2,5 +2,12 @@
   .col-md-12
     .row
       h1 = @article.title
-    .row
       p = @article.body 
+      
+      hr
+      h3 Comment
+      = form_for [@article, @comment], class: 'form-group' do |f|
+        = f.text_area :body, class: 'form-control'
+        = f.submit 'Comment', class: 'btn btn-primary'
+
+      = render @comments
