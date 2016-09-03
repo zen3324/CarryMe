@@ -11,18 +11,13 @@ html
       nav.navbar.navbar-default
         .container
           .navbar-header
-            a.navbar-brand[href="#"]
-              | CarryMe
+            = link_to 'CarryMe', root_path, class: 'navbar-brand'
           .collapse.navbar-collapse
             ul.nav.navbar-nav
               li
-                a[href="#"]
-                  | About
-              li
-                = link_to 'new article', new_article_path
+                = link_to '質問する', new_article_path
             ul.nav.navbar-nav.navbar-right
               - if user_signed_in?
-                |  <strong
                 = link_to current_user.name, pages_show_path
                 li
                   = link_to 'プロフィール変更', edit_user_registration_path
@@ -30,30 +25,9 @@ html
                   = link_to 'ログアウト', destroy_user_session_path, method: :delete
               - else
                 li
-                  = link_to 'サインアップ', new_user_registration_path
+                  = link_to '登録', new_user_registration_path
                 li
                   = link_to 'ログイン', new_user_session_path
-              li.dropdown
-                a.dropdown-toggle[href="#" data-toggle="dropdown" role="button" aria-expanded="false"]
-                  | Dropdown 
-                  span.caret
-                ul.dropdown-menu[role="menu"]
-                  li
-                    a[href="#"]
-                      | 星空 凛
-                  li
-                    a[href="#"]
-                      | 西木野 真姫
-                  li.divider
-                  li
-                    a[href="#"]
-                      | 矢澤 にこ
-                  li
-                    a[href="#"]
-                      | 絢瀬 絵里
-                  li
-                    a[href="#"]
-                      | 東條 希
     p.notice
       = notice
     p.alert
