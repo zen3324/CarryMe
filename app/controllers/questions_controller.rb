@@ -5,8 +5,8 @@ class QuestionsController < ApplicationController
 
   def show
     @question = Question.find(params[:id])
-    @comment = @question.comments.build
-    @comments = @question.comments
+    @answer = @question.answers.build
+    @answers = @question.answers
   end
 
   def new

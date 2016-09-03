@@ -1,6 +1,6 @@
-class CreateComments < ActiveRecord::Migration
+class CreateAnswers < ActiveRecord::Migration
   def change
-    create_table :comments do |t|
+    create_table :answers do |t|
       t.text :body
       t.integer :user_id
       t.integer :question_id

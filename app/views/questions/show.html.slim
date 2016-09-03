@@ -5,9 +5,9 @@
       p = @question.body 
       
       hr
-      h3 Comment
-      = form_for [@question, @comment], class: 'form-group' do |f|
+      h3 Answer
+      = form_for [@question, @answer], class: 'form-group' do |f|
         = f.text_area :body, class: 'form-control'
-        = f.submit 'Comment', class: 'btn btn-primary'
+        = f.submit 'Answer', class: 'btn btn-primary'
 
-      = render @comments
+      = render @answers

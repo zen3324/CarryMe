@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   get 'pages/show'
 
   devise_for :users
-  
+
   resources :questions do
-    resources :comments
+    resources :answers
   end
 end
