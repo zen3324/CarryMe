@@ -15,7 +15,7 @@ html
           .collapse.navbar-collapse
             ul.nav.navbar-nav
               li
-                = link_to '質問する', new_article_path
+                = link_to '質問する', new_question_path
             ul.nav.navbar-nav.navbar-right
               - if user_signed_in?
                 = link_to current_user.name, pages_show_path

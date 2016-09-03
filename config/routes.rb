@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
-  root 'articles#index'
+  root 'questions#index'
   get 'pages/show'
 
   devise_for :users
   
-  resources :articles do
+  resources :questions do
     resources :comments
   end
 end
