@@ -215,3 +215,11 @@ ja:
       user:
         name: ユーザー名
         email: メールアドレス
+
+  sign_up: 新規登録
+  login: ログイン
+  logout: ログアウト
+  edit_profile: プロフィール変更
+  question: 質問する
+  answer: 回答する
+  answers: 回答

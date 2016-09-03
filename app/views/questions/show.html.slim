@@ -5,9 +5,9 @@
       p = @question.body 
       
       hr
-      h3 Answer
+      h3 = t(:answers)
       = form_for [@question, @answer], class: 'form-group' do |f|
         = f.text_area :body, class: 'form-control'
-        = f.submit 'Answer', class: 'btn btn-primary'
+        = f.submit t(:answer), class: 'btn btn-primary'
 
       = render @answers
