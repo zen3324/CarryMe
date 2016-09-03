@@ -33,6 +33,7 @@ group :development, :test do
   gem 'spring-commands-rspec'
   gem 'rspec-rails'
   gem 'guard-rspec'
+  gem 'guard-livereload'
   gem "better_errors"
   gem "binding_of_caller"
   gem 'seed-fu'
