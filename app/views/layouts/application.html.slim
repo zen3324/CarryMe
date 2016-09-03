@@ -15,20 +15,20 @@ html
           .collapse.navbar-collapse
             ul.nav.navbar-nav
               li
-                = link_to '質問する', new_question_path
+                = link_to t(:question), new_question_path
             ul.nav.navbar-nav.navbar-right
               - if user_signed_in?
                 li
                   = link_to current_user.name, pages_show_path
                 li
-                  = link_to 'プロフィール変更', edit_user_registration_path
+                  = link_to t(:edit_profile), edit_user_registration_path
                 li
-                  = link_to 'ログアウト', destroy_user_session_path, method: :delete
+                  = link_to t(:logout), destroy_user_session_path, method: :delete
               - else
                 li
-                  = link_to '登録', new_user_registration_path
+                  = link_to t(:sign_up), new_user_registration_path
                 li
-                  = link_to 'ログイン', new_user_session_path
+                  = link_to t(:login), new_user_session_path
     p.notice
       = notice
     p.alert
