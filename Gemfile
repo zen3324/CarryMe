@@ -37,7 +37,10 @@ group :development, :test do
   gem "better_errors"
   gem "binding_of_caller"
   gem 'seed-fu'
+  gem 'factory_girl_rails'
   gem 'faker'
+  gem 'capybara'
+  gem 'database_cleaner'
 end
 
 group :development do
