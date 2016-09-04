@@ -1,7 +1,8 @@
 .container
-  .col-md-12
-    .row
+  .row
+    .col-md-8
       h1 = @question.title
+      p = l @question.created_at, format: :short
       p = @question.body 
       
       hr
@@ -11,3 +12,5 @@
         = f.submit t(:answer), class: 'btn btn-primary'
 
       = render @answers
+    .col-md-4
+      = link_to @question.user.name, '#'
